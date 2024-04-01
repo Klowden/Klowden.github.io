@@ -46,7 +46,7 @@ jobs:
           VITE_FIREBASE_SENDER_ID: ${{ secrets.VITE_FIREBASE_SENDER_ID }}
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
       - name: Move build output to docs
-        run: cp -r build/* docs/
+        run: cp -r build/* ./
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
