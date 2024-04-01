@@ -3,6 +3,9 @@ module.exports = {
 	appDirectory: "app",
 	ignoredRouteFiles: ["**/.*"],
 	watchPaths: ["./public", "./.env"],
+	serverBuildTarget: "netlify",
+	server: "./server.js",
 	publicPath:
-		process.env.NODE_ENV === "production" ? "/<repository-name>/" : "/",
+		process.env.NODE_ENV === "production" ? "/<klowden.github.io>/" : "/",
+	outputDirectory: "./docs",
 }
