@@ -7,5 +7,4 @@ module.exports = {
 	server: "./server.js",
 	publicPath:
 		process.env.NODE_ENV === "production" ? "/<klowden.github.io>/" : "/",
-	outputDirectory: "./docs",
 }
