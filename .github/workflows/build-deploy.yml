@@ -45,6 +45,8 @@ jobs:
           VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
           VITE_FIREBASE_SENDER_ID: ${{ secrets.VITE_FIREBASE_SENDER_ID }}
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+      - name: Reorganize files for GitHub Pages
+        run: mv build/client/* build/
       - name: Move build output to docs
         run: cp -r build/* ./
       - name: Setup Pages
