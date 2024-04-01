@@ -1,0 +1,118 @@
+{
+    "ExampleImages" : [
+        {
+            "src":"/images/cooledtured/carousel.svg",
+            "alt":"Feature Carousel Example",
+            "title":"Timed Interactive Carousels!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/mobileCarousel.svg",
+            "alt":"Mobile Feature Carousel Example",
+            "title":"Responsive Design!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/animatedFrames.svg",
+            "alt":"Banner example image",
+            "title":"Animated Banners!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/blog.svg",
+            "alt":"Blog Example",
+            "title":"Blog Layouts!",
+            "url":"https://cooledtured.com/blogs/news"
+        },
+        {
+            "src":"/images/cooledtured/blogExample.svg",
+            "alt":"Blog Article Example",
+            "title":"Articles!",
+            "url":"https://cooledtured.com/blogs/news"
+        },
+        {
+            "src":"/images/cooledtured/brandMenu.svg",
+            "alt":"Icon Menu Selection Example",
+            "title":"Content Menus!",
+            "url":"https://cooledtured.com/brandCollections"
+        },
+        {
+            "src":"/images/cooledtured/cart.svg",
+            "alt":"Cart Example",
+            "title":"Cart Essentials!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/discordWidgetbot.svg",
+            "alt":"Discord integration - WidgetBot",
+            "title":"Integrate your community!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/featuredCards.svg",
+            "alt":"Card Menu Example",
+            "title":"Modern Menu Design!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/footer.svg",
+            "alt":"Footer Example",
+            "title":"Footers!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/header.svg",
+            "alt":"Header Example",
+            "title":"Headers & Nav Bars!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/mobileMenu.svg",
+            "alt":"Mobile Navigation Menu Example",
+            "title":"Mobile Navigation!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/login.svg",
+            "alt":"Login Example",
+            "title":"Login Templates!",
+            "url":"https://cooledtured.com/account/login"
+        },
+        {
+            "src":"/images/cooledtured/newestPreOrders.svg",
+            "alt":"Selection Example - Slider with dynamic queries",
+            "title":"Sliding menus!",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/searchFunctionality.svg",
+            "alt":"Search Page Example",
+            "title":"Search Pages!",
+            "url":"https://cooledtured.com/search"
+        },
+        {
+            "src":"/images/cooledtured/searchFilters.svg",
+            "alt":"Search filter options Example",
+            "title":"Filter your content!",
+            "url":"https://cooledtured.com/search"
+        },
+        {
+            "src":"/images/cooledtured/sleekVisuals.svg",
+            "alt":"Visuals Example",
+            "title":"Visuals as you wish!",
+            "url":"https://cooledtured.com/community"
+        },
+        {
+            "src":"/images/cooledtured/submenus.svg",
+            "alt":"Submenu Example",
+            "title":"Intuitive Sub-Navigation",
+            "url":"https://cooledtured.com"
+        },
+        {
+            "src":"/images/cooledtured/videosPage.svg",
+            "alt":"Video Integration Example - Twitch & Youtube w/ dynamic updates via APIs",
+            "title":"Showcase your Content!",
+            "url":"https://cooledtured.com/videos"
+        }
+    ]
+}
