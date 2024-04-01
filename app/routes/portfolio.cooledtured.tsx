@@ -71,6 +71,8 @@ export default function Cooledtured() {
 				<div className='w-full h-full flex flex-col place-content-center'>
 					<a
 						href={exampleImages[currentImageIndex].url}
+						target='_blank'
+						rel='noopener noreferrer'
 						className='flex relative justify-center font-bold text-amber-500 bg-gray-900 rounded-t-lg px-4 pb-4 pt-3'
 					>
 						<h3 className='flex w-max justify-center text-center text-xl sm:text-2xl md:text-3xl hover:text-blue-800 transition-all duration-150 ease-out hover:scale-[102%] active:scale-95'>
