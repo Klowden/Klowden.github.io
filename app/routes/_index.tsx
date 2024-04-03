@@ -18,9 +18,20 @@ export default function Index() {
 					<h1 className='font-bold text-[2.5rem] leading-none xxs:text-5xl xs:text-6xl'>
 						Christopher Lowden
 					</h1>
-					<h2 className='text-gray-800 text-2xl xs:text-3xl'>
+					<h2 className='text-gray-800 text-2xl xs:text-3xl font-medium'>
 						Fullstack Web Application Developer
 					</h2>
+					<div className='flex mt-2 gap-6 place-items-center'>
+						<img
+							src='/images/profile.svg'
+							className='max-w-52 rounded-full border-4 border-gray-800'
+						/>
+						<ul className='flex flex-col list-disc list-inside gap-2 text-lg font-medium'>
+							<li>Seasoned Developer</li>
+							<li>Avid Learning</li>
+							<li>Cat Collector</li>
+						</ul>
+					</div>
 				</header>
 				<div className='flex flex-col sm:flex-row items-center gap-4'>
 					<h3 className='text-xl font-semibold'>Got a project?</h3>

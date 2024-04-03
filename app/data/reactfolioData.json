@@ -1,0 +1,46 @@
+{
+    "ExampleImages" : [
+        {
+            "src":"/images/reactfolio-v1/Home.svg",
+            "alt":"Homepage - React",
+            "title":"React Homepage",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        },
+        {
+            "src":"/images/reactfolio-v1/Home-mobile.svg",
+            "alt":"Mobile View of homepage - React",
+            "title":"Mobile View of Homepage",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        },
+        {
+            "src":"/images/reactfolio-v1/mobile-menu.svg",
+            "alt":"Mobile Menu",
+            "title":"Mobile Menu - Original Attempt",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        },
+        {
+            "src":"/images/reactfolio-v1/click-Interactivity.svg",
+            "alt":"Clicks caused ripples",
+            "title":"Screen Interactivity",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        },
+        {
+            "src":"/images/reactfolio-v1/About.svg",
+            "alt":"About Me - React",
+            "title":"About Section",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        },
+        {
+            "src":"/images/reactfolio-v1/contactPage.svg",
+            "alt":"Contact Page",
+            "title":"Contact Page - React",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        },
+        {
+            "src":"/images/reactfolio-v1/OldFolio.svg",
+            "alt":"Previous Portfolio Section - Deprecated",
+            "title":"Deprecated Portfolio - Firebase",
+            "url": "https://github.com/Klowden/PortfolioV1-React"
+        }
+    ]
+}

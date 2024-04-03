@@ -1,0 +1,34 @@
+{
+    "ExampleImages" : [
+        {
+            "src":"/images/resume/Header.svg",
+            "alt":"Header - HTML Resume",
+            "title":"Resume Header",
+            "url": "klowden.github.io/resume"
+        },
+        {
+            "src":"/images/resume/Projects.svg",
+            "alt":"Project Section - HTML",
+            "title":"Projects Section",
+            "url": "klowden.github.io/resume"
+        },
+        {
+            "src":"/images/resume/Skills.svg",
+            "alt":"Skills Section - HTML",
+            "title":"Skills Section",
+            "url": "klowden.github.io/resume"
+        },
+        {
+            "src":"/images/resume/LeadWebDev.svg",
+            "alt":"Work Experience 1",
+            "title":"Work Exp 1 - Lead Developer",
+            "url": "klowden.github.io/resume"
+        },
+        {
+            "src":"/images/resume/Freelance.svg",
+            "alt":"Work Experience 2",
+            "title":"Work Exp 2 - Freelance",
+            "url": "klowden.github.io/resume"
+        }
+    ]
+}

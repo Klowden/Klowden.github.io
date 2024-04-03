@@ -24,4 +24,11 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    // Dynamically safelist classes to ensure they're not purged.
+    {
+      pattern: /^text-/, // Match any class starting with "text-".
+      variants: ['hover', 'focus', 'active', 'group-hover'], // Include specific variants.
+    },
+  ],
 } satisfies Config

@@ -1,6 +1,6 @@
 import { SetStateAction, useState } from "react"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6"
-import imageData from "../data/cooledturedData.json"
+import imageData from "../data/reactfolioData.json"
 
 export default function Cooledtured() {
 	const exampleImages = imageData.ExampleImages
@@ -28,64 +28,58 @@ export default function Cooledtured() {
 	return (
 		<div className='grid place-items-center'>
 			<div className=''>
-				<div className='p-4 max-w-[70ch] flex flex-col gap-4'>
+				<div className='p-4 max-w-[65ch] flex flex-col gap-4'>
 					<div className='flex flex-col sm:flex-row justify-center items-center gap-8'>
-						<h1 className='font-bold text-4xl sm:text-5xl'>Cooledtured V3</h1>
+						<h1 className='font-bold text-4xl sm:text-5xl'>
+							Portfolio-V1: React
+						</h1>
 						<img
-							src='/images/cooledtured/cooledturedLogo.svg'
-							alt='cooledtured logo'
+							src='/images/reactfolio-v1/react-js-icon.svg'
+							alt='React logo'
 							className='aspect-square size-20'
 						/>
 					</div>
-					<div className='indent-4 flex flex-col gap-4'>
+					<div className='indent-4 flex flex-col gap-4 mb-4'>
 						<p>
-							Cooledtured operates in the E-commerce domain, specializing in
-							pop-culture merchandise. During my tenure at Cooledtured, I
-							spearheaded a team of 8 intern developers and collaborated closely
-							with both the management and design teams.
+							My original Portfolio was developed inside of React, and was also
+							coincidentally my first time utilizing React for anything, so
+							needless to say there were alot of misses and frustration building
+							this site.
 						</p>
 						<p>
-							Our project's primary objective was to enhance the website by
-							introducing social and community features. To achieve this, we
-							transitioned from Shopify's Liquid template engine to a more
-							robust and flexible front-end architecture using Shopify's
-							Hydrogen framework along with Remix, which leverages React for
-							seamless integration with the existing back-end systems.
+							This is no longer published to my GitHub Pages simply due to it
+							being deprecated. I've switched to using a Remix-Run based
+							portfolio instead <em>(the one you are currently in)</em>, so
+							there's no need to keep the other running.
 						</p>
 						<p>
-							Embracing Hydrogen and Remix presented a significant learning
-							curve as they were novel technologies to me. I'm proud to say that
-							not only did we meet our initial goals, but I'm also leading
-							ongoing developments and the maintenance of the platform, ensuring
-							its continuous evolution.
+							I've made some small updates to the code when I was attempting to
+							revamp it, but I missed Remix and ended up starting over from
+							scratch with a more clean-feeling project.
 						</p>
+						<div className='indent-0'>
+							<h3 className='font-bold mb-2'>Important Notes:</h3>
+							<ul className='list-disc list-inside flex flex-col gap-4'>
+								<li className='indent-4'>
+									Originally I had utilize a canvas to create outwardly
+									expanding ripples of varying sizes when the user clicked
+									anywhere on the screen. The colors shifted based on random
+									selection of a pre-defined color schema, and I enjoyed it at
+									the time; However, this proved to be quite resource heavy.
+								</li>
+								<li className='indent-4'>
+									I opted to remove the Canvas Element from my portfolio since
+									it isn't the best experience on a page, and I've since opted
+									for the more minimalist approach.
+								</li>
+								<li className='indent-4'>
+									Time was not kind to my styling. Upon running Npm Update many
+									things seemed to shift around, which was ultimately my sign to
+									abandon this framework for one I wanted to keep working in.
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div className=' flex flex-col gap-4 p-4 mb-6 max-w-[65ch]'>
-					<div className='flex gap-4 justify-center'>
-						<h2 className='bg-blue-950 text-amber-500 font-medium w-60 text-center px-2 py-1 rounded-md hover:scale-[102%] hover:text-gray-200 transition-all duration-100 ease-in-out active:scale-95'>
-							<a
-								href='https://cooledtured.com/internship'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								See The current Website!
-							</a>
-						</h2>
-						<h2 className='bg-blue-950 text-amber-500 font-medium w-60 text-center px-2 py-1 rounded-md hover:scale-[102%] hover:text-gray-200 transition-all duration-100 ease-in-out active:scale-95'>
-							<a
-								href='https://github.com/Klowden/CooledturedV3'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								See the GitHub Clone!
-							</a>
-						</h2>
-					</div>
-					<p className='text-center font-sm italic'>
-						No, the clone doesn't work unless you're connected to the backend.
-						That would be extremely bad otherwise.
-					</p>
 				</div>
 			</div>
 			{/* Image carousel container */}

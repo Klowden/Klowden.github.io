@@ -1,6 +1,6 @@
 import { SetStateAction, useState } from "react"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6"
-import imageData from "../data/cooledturedData.json"
+import imageData from "../data/resumeData.json"
 
 export default function Cooledtured() {
 	const exampleImages = imageData.ExampleImages
@@ -30,62 +30,66 @@ export default function Cooledtured() {
 			<div className=''>
 				<div className='p-4 max-w-[70ch] flex flex-col gap-4'>
 					<div className='flex flex-col sm:flex-row justify-center items-center gap-8'>
-						<h1 className='font-bold text-4xl sm:text-5xl'>Cooledtured V3</h1>
+						<h1 className='font-bold text-4xl sm:text-5xl'>Resume</h1>
 						<img
-							src='/images/cooledtured/cooledturedLogo.svg'
-							alt='cooledtured logo'
+							src='/images/resume/HTML5-logo.svg'
+							alt='HTML logo'
 							className='aspect-square size-20'
 						/>
 					</div>
-					<div className='indent-4 flex flex-col gap-4'>
-						<p>
-							Cooledtured operates in the E-commerce domain, specializing in
-							pop-culture merchandise. During my tenure at Cooledtured, I
-							spearheaded a team of 8 intern developers and collaborated closely
-							with both the management and design teams.
+					<div className=' flex flex-col gap-4 mb-4'>
+						<p className='indent-4'>
+							My Resume was created using only HTML, JavaScript, and CSS. These
+							days I tend to focus more on Remix-Run than other frameworks so it
+							was a bit of a throwback updating this file.
 						</p>
-						<p>
-							Our project's primary objective was to enhance the website by
-							introducing social and community features. To achieve this, we
-							transitioned from Shopify's Liquid template engine to a more
-							robust and flexible front-end architecture using Shopify's
-							Hydrogen framework along with Remix, which leverages React for
-							seamless integration with the existing back-end systems.
+						<a
+							href='https://klowden.github.io/Resume'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='indent-0 w-max'
+						>
+							<p className='hover:text-blue-700 text-black font-bold'>
+								Access the Resume Directly HERE
+							</p>
+						</a>
+						<p className='indent-4'>
+							Full Disclosure, this Document is not developed with Mobile
+							Compatibility in mind. It's a resume. If you must use a mobile
+							device, please view in desktop mode.
 						</p>
-						<p>
-							Embracing Hydrogen and Remix presented a significant learning
-							curve as they were novel technologies to me. I'm proud to say that
-							not only did we meet our initial goals, but I'm also leading
-							ongoing developments and the maintenance of the platform, ensuring
-							its continuous evolution.
+						<p className='indent-4'>
+							I designed this resume with a little goal of having a background
+							that moves around according to your mouse position. The circles
+							clump and grow when within a certain distance of the mouse, and
+							explode away onClick.
 						</p>
+						<div>
+							<h3 className='font-bold'>Important Points:</h3>
+							<ul className='flex flex-col gap-4 list-inside list-disc'>
+								<li className='indent-4'>
+									I've worked on various projects included the complete overhaul
+									of a client's ecommerce website from scratch due to changing
+									the framework they were on, which is a huge task, especially
+									due to the framework being brand new to me at the time.
+								</li>
+								<li className='indent-4'>
+									The Cooledtured V3 Project is my best example of work
+									experience and the project I've done the most in. I was the
+									team lead of 10 developers and worked tirelessly with
+									management, the ui/ix team, and my developers to get this site
+									functional, and it has made we great working inside of
+									Remix-Run projects.
+								</li>
+								<li className='indent-4'>
+									I've made a push to utilize TailwindCss in this project, which
+									only works well for it due to the dynamic routing in place -
+									otherwise I would have utilized SCSS by preference for more
+									scalable maintenance needs.
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div className=' flex flex-col gap-4 p-4 mb-6 max-w-[65ch]'>
-					<div className='flex gap-4 justify-center'>
-						<h2 className='bg-blue-950 text-amber-500 font-medium w-60 text-center px-2 py-1 rounded-md hover:scale-[102%] hover:text-gray-200 transition-all duration-100 ease-in-out active:scale-95'>
-							<a
-								href='https://cooledtured.com/internship'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								See The current Website!
-							</a>
-						</h2>
-						<h2 className='bg-blue-950 text-amber-500 font-medium w-60 text-center px-2 py-1 rounded-md hover:scale-[102%] hover:text-gray-200 transition-all duration-100 ease-in-out active:scale-95'>
-							<a
-								href='https://github.com/Klowden/CooledturedV3'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								See the GitHub Clone!
-							</a>
-						</h2>
-					</div>
-					<p className='text-center font-sm italic'>
-						No, the clone doesn't work unless you're connected to the backend.
-						That would be extremely bad otherwise.
-					</p>
 				</div>
 			</div>
 			{/* Image carousel container */}

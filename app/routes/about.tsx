@@ -10,7 +10,7 @@ import {
 export default function About() {
 	return (
 		<div className='flex flex-col items-center lg:items-start mx-auto max-w-[70rem]'>
-			<div className='flex flex-col lg:flex-row flex-wrap gap-4 sm:mx-0 mt-8 place-items-center'>
+			<div className='flex flex-col lg:flex-row flex-wrap gap-4 sm:mx-0 mt-4 place-items-center'>
 				<div className='flex flex-col gap-4 max-w-[62ch] lg:max-w-[55ch] text-wrap mx-1 sm:mx-2 p-2 xs:p-4 my-0 xs:my-4'>
 					<h1 className='text-5xl font-bold'>About Me</h1>
 					<div className='flex flex-col gap-2 text-base mr-8'>
@@ -59,6 +59,61 @@ export default function About() {
 					</div>
 				</div>
 			</div>
+			<section
+				className='p-4 mx-2 max-w-[60ch] lg:max-w-full lg:mt-0 lg:mb-4
+			mb-8 mt-16'
+			>
+				<h1 className='text-4xl font-bold mb-2'>Now for Real:</h1>
+				<div className='flex flex-wrap'>
+					<div className='flex-1'>
+						<div
+							className='columns-1 lg:columns-2 indent-4'
+							style={{ columnGap: "2rem" }}
+						>
+							<p className='my-2'>
+								<strong>I spent most of my time</strong> pondering my passions
+								and future path, yet here I am, still mapping it out by going
+								where the wind takes me. Crafting creations and diving into the
+								digital depths from the comfort of my computer, embracing the
+								challenge of mastering new skills and dabbling in fresh ideas
+								are the concepts and action that truly keep me happy in my work.
+							</p>
+							<p className='my-2'>
+								<strong>I'm a well spoken,</strong> well written individual with
+								a background in accounting, engineering, data analysis, and a
+								few programming languages that come and go from memory as I need
+								them; They're pretty easy to pick up once you get the hang of
+								the general concepts of similar languages.
+							</p>
+							<p className='my-2'>
+								<strong>My academic voyage</strong> landed me a BA in Political
+								Science, a testament more to the journey and the perspectives
+								gained than a tool for my professional toolbox. And here I
+								stand, a mere one class shy of a Computer Science BA, opting
+								instead to leave it behind. Why, you ask? I mean, money, for
+								one. But real-world applications and rapid technological
+								evolution have taught me the limited shelf life of formal
+								education in this domain. My learning is now fueled by
+								curiosity, hands-on projects, and the collaboration with peers
+								whenever possible.
+							</p>
+							<p className='my-2'>
+								<strong>In my off time</strong> I'm delving into survival games
+								with friends or pouring my heart into a nascent game project.
+								And yes, it's in the <strong>very</strong> early stages of
+								development. Maybe you'll play it someday, but not for awhile.
+							</p>
+							<p className='mt-2'>
+								<strong>I now find myself </strong> in my basement with my
+								work-buddy kittens and puppos for the majority of my days. When
+								I've done enough I just go up hang out with my wife for the
+								remainder of the night, ranging from going out to trying out a
+								new game. Truly it's nice.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	)
 }
