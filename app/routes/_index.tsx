@@ -4,8 +4,8 @@ import { FaArrowCircleUp } from "react-icons/fa"
 
 export const meta: MetaFunction = () => {
 	return [
-		{ title: "New Remix App" },
-		{ name: "description", content: "Welcome to Remix!" },
+		{ title: "Developer Page" },
+		{ name: "description", content: "Welcome to my Profile!" },
 	]
 }
 
@@ -28,7 +28,7 @@ export default function Index() {
 						/>
 						<ul className='flex flex-col list-disc list-inside gap-2 text-lg font-medium'>
 							<li>Seasoned Developer</li>
-							<li>Avid Learning</li>
+							<li>Avid Learner</li>
 							<li>Cat Collector</li>
 						</ul>
 					</div>
