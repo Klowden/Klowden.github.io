@@ -9,7 +9,7 @@ import {
 export default function Social() {
 	return (
 		<div className='bottom-0 align-middle z-0'>
-			<ul className='gap-2 grid grid-cols-5 text-amber-500'>
+			<ul className='gap-2 grid grid-cols-6 text-amber-500'>
 				<li>
 					<a
 						href='mailto:klowdensolutions@gmail.com'
@@ -53,6 +53,19 @@ export default function Social() {
 						rel='noopener noreferrer'
 					>
 						<FaYoutube className='hover:scale-110 hover:text-blue-500 text-3xl cursor-pointer' />
+					</a>
+				</li>
+				<li>
+					<a
+						href='https://bsky.app/profile/kreestoph.bsky.social'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<img
+							src='/images/Bluesky_Logo.svg'
+							alt='BlueSky Logo'
+							className='hover:scale-110 hover:cursor-pointer hover:-hue-rotate-[325deg] hover:saturate-200 h-7'
+						/>
 					</a>
 				</li>
 			</ul>

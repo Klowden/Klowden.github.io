@@ -9,7 +9,7 @@ import {
 export default function Header() {
 	return (
 		<div className='w-full bg-gray-900 overflow-visible pt-4 pb-2'>
-			<div className='flex justify-between max-w-[40rem] text-amber-500 font-semibold first:ml-4 last:mr-4 border-b-[1px] border-gray-500'>
+			<div className='flex justify-between max-w-[40rem] text-amber-500 font-semibold first:ml-4 last:mr-4 border-b-[4px] border-l-4 border-gray-800'>
 				<NavLink
 					prefetch='intent'
 					to='/'

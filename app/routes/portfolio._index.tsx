@@ -37,7 +37,7 @@ export default function Portfolio() {
 						own expectations.
 					</p>
 					<p>
-						My most cherrished & challenging project thus far has been through
+						My most cherished & challenging project thus far has been through
 						Cooledtured, a company specializing in pop-culture merchandise,
 						where I was brought on to lead a team of developers in completely
 						restructuring the site. The challenge was that I had never worked in

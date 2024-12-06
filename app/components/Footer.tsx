@@ -25,7 +25,7 @@ export default function Footer() {
 							Built using Remix-Run
 						</p>
 						<img
-							src='images/logo-remix.svg'
+							src='/images/logo-remix.svg'
 							className='max-w-8'
 						/>
 					</a>
