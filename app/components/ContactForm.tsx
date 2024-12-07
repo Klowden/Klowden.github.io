@@ -16,6 +16,29 @@ const ContactForm = () => {
 		return emailRegex.test(email)
 	}
 
+	// Phone number formatting function
+	const formatPhoneNumber = (value: string) => {
+		// Remove all non-digit characters
+		const cleaned = value.replace(/\D/g, "")
+		const match = cleaned.match(/^(\d{1,3})(\d{0,3})(\d{0,4})$/)
+		if (match) {
+			const formatted = [
+				match[1] && `(${match[1]})`,
+				match[2] && `${match[2]}`,
+				match[3] && `${match[3]}`,
+			]
+				.filter(Boolean)
+				.join(" ")
+				.replace(/\s{2,}/g, " ")
+			return formatted.trim().replace(/(\)\s{0,})/g, ") ")
+		}
+		return value
+	}
+
+	const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setPhoneNumber(formatPhoneNumber(e.target.value))
+	}
+
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 
@@ -98,7 +121,7 @@ const ContactForm = () => {
 							name='user_phone'
 							id='user_phone'
 							value={phoneNumber}
-							onChange={(e) => setPhoneNumber(e.target.value)}
+							onChange={handlePhoneNumberChange}
 							placeholder='(xxx) xxx-xxxx'
 							className='w-full p-2 rounded-lg bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500'
 						/>
@@ -147,7 +170,7 @@ const ContactForm = () => {
 				{/* Submit Button */}
 				<button
 					type='submit'
-					className='w-full mt-4 py-2 text-lg font-semibold text-gray-900 bg-amber-500 hover:bg-amber-600 rounded-lg shadow-md transition-all duration-150 ease-in-out glow-effect-orange'
+					className='w-full mt-4 py-2 text-lg font-semibold text-gray-900 bg-amber-500 hover:bg-amber-600 rounded-lg shadow-md transition-all duration-150 ease-in-out glow-effect-orange active:scale-95'
 				>
 					Send Message
 				</button>
