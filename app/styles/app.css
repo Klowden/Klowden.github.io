@@ -9,7 +9,7 @@
 }
 
 .glow-effect-orange {
-	animation: glow-animation 2s ease-in-out infinite;
+	animation: glow-animation 1.5s ease-out infinite;
 }
 
 .cubespinner {

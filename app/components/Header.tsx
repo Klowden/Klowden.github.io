@@ -1,52 +1,104 @@
 import { NavLink } from "@remix-run/react"
 import {
-	FaEnvelopeOpen,
-	FaSuitcase,
-	FaUser,
-	FaHouseChimney,
+	FaEnvelopeOpen, // Contact icon
+	FaSuitcase, // Portfolio/Work icon
+	FaUser, // About icon
+	FaHouseChimney, // Home icon
+	FaScrewdriverWrench, // Skills icon
 } from "react-icons/fa6"
 
+// Header component definition
 export default function Header() {
 	return (
-		<div className='w-full bg-gray-900 overflow-visible pt-4 pb-2'>
-			<div className='flex justify-between max-w-[40rem] text-amber-500 font-semibold first:ml-4 last:mr-4 border-b-[4px] border-l-4 border-gray-800'>
+		// Header container: Full width, gradient background for aesthetics, and shadow for depth
+		<header className='w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-lg overflow-visible pt-4 pb-2'>
+			{/* Inner navigation wrapper: Centers the navigation links, adds spacing and borders */}
+			<div className='flex justify-between items-center max-w-6xl mx-auto px-4 text-amber-500 font-semibold border-b-[3px] border-gray-800'>
+				{/* Home section link */}
 				<NavLink
 					prefetch='intent'
-					to='/'
+					to='/' // Links to the home route
 					end
-					className='flex flex-col items-center rounded-tr-3xl border-2 border-gray-600 px-4 pt-4 gap-1 size-16 xs:size-[4.5rem] sm:size-20 transition-all duration-150 ease-in-out hover:text-[#F5BB0A] hover:-translate-y-1 hover:scale-[102%] active:scale-[96%] focus:text-gray-100'
+					className={({ isActive }) =>
+						`flex flex-col items-center gap-1 px-4 pt-2 pb-1 transition-all duration-200 ease-in-out ${
+							isActive
+								? "text-gray-100 scale-105" // Active link styles
+								: "hover:text-amber-400 hover:-translate-y-1 hover:scale-[102%]" // Hover styles
+						}`
+					}
 				>
-					<FaHouseChimney className='text-xl sm:text-2xl' />
-					<h3 className='text-sm xs:text-base'>Home</h3>
+					<FaHouseChimney className='text-2xl' />
+					<span className='text-sm xs:text-base'>Home</span>
 				</NavLink>
+
+				{/* About section link */}
 				<NavLink
 					prefetch='intent'
-					to='/about'
+					to='/about' // Links to the about route
 					end
-					className='flex flex-col items-center rounded-tr-3xl border-2 border-gray-600 px-4 pt-4 gap-1 size-16 xs:size-[4.5rem] sm:size-20 transition-all duration-150 ease-in-out hover:text-[#F5BB0A] hover:-translate-y-1 hover:scale-[102%] active:scale-[96%] focus:text-gray-100'
+					className={({ isActive }) =>
+						`flex flex-col items-center gap-1 px-4 pt-2 pb-1 transition-all duration-200 ease-in-out ${
+							isActive
+								? "text-gray-100 scale-105" // Active link styles
+								: "hover:text-amber-400 hover:-translate-y-1 hover:scale-[102%]" // Hover styles
+						}`
+					}
 				>
-					<FaUser className='text-xl sm:text-2xl' />
-					<h3 className='text-sm xs:text-base'>About</h3>
+					<FaUser className='text-2xl' />
+					<span className='text-sm xs:text-base'>About</span>
 				</NavLink>
+
+				{/* Portfolio/Work section link */}
 				<NavLink
 					prefetch='intent'
-					to='/portfolio'
+					to='/portfolio' // Links to the portfolio/work route
 					end
-					className='flex flex-col items-center rounded-tr-3xl border-2 border-gray-600 px-4 pt-4 gap-1 size-16 xs:size-[4.5rem] sm:size-20 transition-all duration-150 ease-in-out hover:text-[#F5BB0A] hover:-translate-y-1 hover:scale-[102%] active:scale-[96%] focus:text-gray-100'
+					className={({ isActive }) =>
+						`flex flex-col items-center gap-1 px-4 pt-2 pb-1 transition-all duration-200 ease-in-out ${
+							isActive
+								? "text-gray-100 scale-105" // Active link styles
+								: "hover:text-amber-400 hover:-translate-y-1 hover:scale-[102%]" // Hover styles
+						}`
+					}
 				>
-					<FaSuitcase className='text-xl sm:text-2xl' />
-					<h3 className='text-sm xs:text-base'>Work</h3>
+					<FaSuitcase className='text-2xl' />
+					<span className='text-sm xs:text-base'>Work</span>
 				</NavLink>
+
+				{/* Skills section link */}
 				<NavLink
 					prefetch='intent'
-					to='/contact'
+					to='/skills' // Links to the skills route
 					end
-					className='flex flex-col items-center rounded-tr-3xl border-2 border-gray-600 px-4 pt-4 gap-1 size-16 xs:size-[4.5rem] sm:size-20 transition-all duration-150 ease-in-out hover:text-[#F5BB0A] hover:-translate-y-1 hover:scale-[102%] active:scale-[96%] focus:text-gray-100'
+					className={({ isActive }) =>
+						`flex flex-col items-center gap-1 px-4 pt-2 pb-1 transition-all duration-200 ease-in-out ${
+							isActive
+								? "text-gray-100 scale-105" // Active link styles
+								: "hover:text-amber-400 hover:-translate-y-1 hover:scale-[102%]" // Hover styles
+						}`
+					}
 				>
-					<FaEnvelopeOpen className='text-xl sm:text-2xl' />
-					<h3 className='text-sm xs:text-base'>Contact</h3>
+					<FaScrewdriverWrench className='text-2xl' />
+					<span className='text-sm xs:text-base'>Skills</span>
+				</NavLink>
+
+				{/* Contact section link */}
+				<NavLink
+					prefetch='intent'
+					to='/contact' // Links to the contact route
+					end
+					className={({ isActive }) =>
+						`flex flex-col items-center gap-1 px-4 pt-2 pb-1 transition-all duration-200 ease-in-out ${
+							isActive
+								? "text-gray-100 scale-105" // Active link styles
+								: "hover:text-amber-400 hover:-translate-y-1 hover:scale-[102%]" // Hover styles
+						}`
+					}
+				>
+					<FaEnvelopeOpen className='text-2xl' />
+					<span className='text-sm xs:text-base'>Contact</span>
 				</NavLink>
 			</div>
-		</div>
+		</header>
 	)
 }

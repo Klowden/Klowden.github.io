@@ -9,35 +9,53 @@ import {
 
 export default function About() {
 	return (
-		<div className='flex flex-col items-center lg:items-start mx-auto max-w-[70rem]'>
-			<div className='flex flex-col lg:flex-row flex-wrap gap-4 sm:mx-0 mt-4 place-items-center'>
-				<div className='flex flex-col gap-4 max-w-[62ch] lg:max-w-[55ch] text-wrap mx-1 sm:mx-2 p-2 xs:p-4 my-0 xs:my-4'>
-					<h1 className='text-5xl font-bold'>About Me</h1>
-					<div className='flex flex-col gap-2 text-base mr-8'>
+		<div className='flex flex-col items-center lg:items-start my-4 md:my-8 mx-auto sm:mx-4 justify-self-center max-w-[70rem] px-4 sm:px-6 lg:px-8 py-8 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700'>
+			{/* Header and CubeSpinner Section */}
+			<div className='flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16 w-full'>
+				{/* About Me Text Section */}
+				<div className='flex flex-col gap-6 max-w-[60ch] lg:max-w-[50ch] text-wrap'>
+					<h1 className='text-5xl font-bold text-amber-500 relative'>
+						About Me
+						{/* Decorative underline */}
+						<span className='absolute left-0 bottom-[-.25rem] h-1 w-24 bg-gradient-to-r from-amber-500 via-green-600 to-purple-600 rounded-full'></span>
+					</h1>
+					<div className='flex flex-col gap-4 text-base text-gray-300'>
 						<p>
-							<strong>As a dedicated freelance web developer</strong> and
-							software engineer, I am always on the search for dynamic projects
-							and collaborations. My goal is to join forces with innovative
-							teams to push the boundaries of current technology.
+							<strong>
+								As a web developer, software engineer, and aspiring game
+								developer in Godot,
+							</strong>{" "}
+							I thrive on dynamic challenges that push the boundaries of
+							creativity and technology. Whether building intuitive web
+							applications or crafting immersive game worlds, I bring a
+							versatile skillset and a commitment to excellence to every
+							project.
 						</p>
 						<p>
-							<strong>With a proven track record</strong> for solving intricate
-							problems and utilizing flexible approaches to changing demands, I
-							pride myself on my ability to enhance any project I'm a part of.
-							I'm committed to delivering top-tier software solutions and ready
-							to make a significant impact right from the start.
+							<strong>
+								With a proven ability to solve intricate problems and adapt to
+								ever-changing demands,
+							</strong>{" "}
+							I excel at transforming ideas into tangible results. From
+							mastering new tools to navigating complex systems, I approach each
+							task with curiosity, determination, and the confidence of someone
+							who can tackle anything.
 						</p>
 						<p>
-							<strong>Beyond the code,</strong> I am deeply invested in
-							fostering a culture of innovation and creativity. I am a lifelong
-							learner, drawing inspiration from a broad spectrum of interests. I
-							firmly believe in the synergy between personal growth and
-							professional excellence in the tech industry.
+							<strong>Beyond the code,</strong> I am passionate about fostering
+							innovation and creativity. I believe that the most meaningful
+							projects arise from collaboration and a willingness to experiment.
+							As a lifelong learner with a broad spectrum of interests, I see
+							every challenge as an opportunity to grow—both personally and
+							professionally—and to contribute to the ever-evolving landscape of
+							technology.
 						</p>
 					</div>
 				</div>
-				<div className='mx-auto w-full lg:w-max h-56 mt-16 ml-16 lg:ml-8 mlg:ml-16 xl:ml-20'>
-					<div className='cubespinner relative w-full mx-auto xxs:mx-12 xs:mx-20 mxs:mx-32 lg:mx-16 grid grid-cols-1'>
+
+				{/* CubeSpinner Section */}
+				<div className='relative w-40 h-40 lg:w-56 lg:h-56 mx-auto mt-8 mb-16 lg:my-20'>
+					<div className='cubespinner relative w-full h-full'>
 						<div className='face1 text-[#0072B2]'>
 							<FaPython />
 						</div>
@@ -59,58 +77,109 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-			<section
-				className='p-4 mx-2 max-w-[60ch] lg:max-w-full lg:mt-0 lg:mb-4
-			mb-8 mt-16'
-			>
-				<h1 className='text-4xl font-bold mb-2'>Now for Real:</h1>
-				<div className='flex flex-wrap'>
-					<div className='flex-1'>
-						<div
-							className='columns-1 lg:columns-2 indent-4'
-							style={{ columnGap: "2rem" }}
-						>
-							<p className='my-2'>
-								<strong>I spent most of my time</strong> pondering my passions
-								and future path, yet here I am, still mapping it out by going
-								where the wind takes me. Crafting creations and diving into the
-								digital depths from the comfort of my computer, embracing the
-								challenge of mastering new skills and dabbling in fresh ideas
-								are the concepts and action that truly keep me happy in my work.
-							</p>
-							<p className='my-2'>
-								<strong>I'm a well spoken,</strong> well written individual with
-								a background in accounting, engineering, data analysis, and a
-								few programming languages that come and go from memory as I need
-								them; They're pretty easy to pick up once you get the hang of
-								the general concepts of similar languages.
-							</p>
-							<p className='my-2'>
-								<strong>My academic voyage</strong> landed me a BA in Political
-								Science, a testament more to the journey and the perspectives
-								gained than a tool for my professional toolbox. And here I
-								stand, a mere one class shy of a Computer Science BA, opting
-								instead to leave it behind. Why, you ask? I mean, money, for
-								one. But real-world applications and rapid technological
-								evolution have taught me the limited shelf life of formal
-								education in this domain. My learning is now fueled by
-								curiosity, hands-on projects, and the collaboration with peers
-								whenever possible.
-							</p>
-							<p className='my-2'>
-								<strong>In my off time</strong> I'm delving into survival games
-								with friends or pouring my heart into a nascent game project.
-								And yes, it's in the <strong>very</strong> early stages of
-								development. Maybe you'll play it someday, but not for awhile.
-							</p>
-							<p className='mt-2'>
-								<strong>I now find myself </strong> in my basement with my
-								work-buddy kittens and puppos for the majority of my days. When
-								I've done enough I just go up hang out with my wife for the
-								remainder of the night, ranging from going out to trying out a
-								new game. Truly it's nice.
-							</p>
+
+			{/* Decorative Divider */}
+			<div className='w-full h-1 mt-12 bg-gradient-to-r from-purple-600 via-gray-800 to-amber-500 rounded-full'></div>
+
+			{/* Now for Real Section */}
+			<section className='relative p-8 w-full mt-12 bg-gray-950 text-gray-300 rounded-lg shadow-md border border-gray-800'>
+				{/* Section Header */}
+				<div className='text-center mb-8'>
+					<h1 className='text-4xl font-bold text-amber-500 relative inline-block mb-4'>
+						Now for Real:
+						{/* Decorative underline */}
+						<span className='absolute left-0 bottom-[-0.25rem] h-1 w-full bg-gradient-to-r from-purple-600 via-amber-500 to-green-600 rounded-full'></span>
+					</h1>
+					<p className='text-lg text-gray-400'>
+						A glimpse into my journey, skills, and work-life balance.
+					</p>
+				</div>
+
+				{/* Content Grid */}
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 leading-relaxed'>
+					{/* Individual Content Blocks */}
+					<div className='flex gap-4 items-start'>
+						<div className='text-amber-500 text-2xl'>
+							<i className='fas fa-compass'></i>
 						</div>
+						<p>
+							<strong>I've spent my career</strong> charting a path defined by
+							curiosity, creativity, and a drive to solve meaningful problems.
+							From coding solutions at my desk to conceptualizing new projects,
+							I thrive on the challenge of turning ideas into reality, adapting
+							to new technologies and methodologies along the way.
+						</p>
+					</div>
+
+					<div className='flex gap-4 items-start'>
+						<div className='text-purple-500 text-2xl'>
+							<i className='fas fa-tools'></i>
+						</div>
+						<p>
+							<strong>With a knack for communication</strong> and a talent for
+							technical problem-solving, I bring a unique mix of skills to the
+							table. My background spans accounting, engineering, data analysis,
+							and a versatile understanding of programming languages. Picking up
+							a new tool or language? Consider it done—adaptability is my second
+							nature.
+						</p>
+					</div>
+
+					<div className='flex gap-4 items-start'>
+						<div className='text-pink-500 text-2xl'>
+							<i className='fas fa-lightbulb'></i>
+						</div>
+						<p>
+							<strong>My diverse skillset</strong> is the product of an
+							unconventional journey. Instead of relying solely on formal
+							education, I’ve cultivated expertise across various disciplines
+							through hands-on experience and self-directed learning. Whether
+							it’s crafting efficient code, building scalable systems, or
+							designing user-friendly interfaces, I bring flexibility and
+							resourcefulness to every project.
+						</p>
+					</div>
+
+					<div className='flex gap-4 items-start'>
+						<div className='text-green-500 text-2xl'>
+							<i className='fas fa-gamepad'></i>
+						</div>
+						<p>
+							<strong>When I'm not coding,</strong> I’m exploring survival games
+							with friends or channeling my creativity into a game development
+							project. While it’s still in the early stages, the process fuels
+							my passion for innovation and pushes my skills further. Who knows?
+							One day, you might find yourself playing it.
+						</p>
+					</div>
+
+					<div className='flex gap-4 items-start'>
+						<div className='text-blue-500 text-2xl'>
+							<i className='fas fa-cat'></i>
+						</div>
+						<p>
+							<strong>My work environment</strong> is a blend of focus and fun.
+							My days are spent in the company of my four-legged assistants—my
+							cats and dogs—while I tackle projects and refine solutions.
+							Evenings are reserved for quality time with my wife, whether we’re
+							trying out new games or exploring the world around us. It’s a
+							balance that keeps me sharp and inspired.
+						</p>
+					</div>
+				</div>
+
+				{/* Decorative Background Accents */}
+				<div className='absolute top-0 left-0 w-16 h-16 bg-gradient-to-br from-purple-600 to-amber-500 opacity-30 rounded-full blur-xl'></div>
+				<div className='absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-600 to-purple-500 opacity-30 rounded-full blur-xl'></div>
+
+				{/* Image Section */}
+				<div className='mt-12 flex justify-center'>
+					<div className='w-full sm:w-3/4 lg:w-1/2 bg-gray-800 h-56 rounded-lg overflow-hidden shadow-lg'>
+						<img
+							src='/images/Stone.webp'
+							alt='Visual representation of journey or projects'
+							className='w-full h-full object-cover'
+						/>
 					</div>
 				</div>
 			</section>

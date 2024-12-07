@@ -1,19 +1,19 @@
 import { SetStateAction, useState } from "react"
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6"
-import imageData from "../data/reactfolioData.json"
+import {
+	HiOutlineArrowNarrowLeft,
+	HiOutlineArrowNarrowRight,
+} from "react-icons/hi"
+import imageData from "../data/resumeData.json"
 
-export default function Cooledtured() {
+export default function Resume() {
 	const exampleImages = imageData.ExampleImages
 
-	// State to keep track of the current image index
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-	// Function to go to the next image
 	const nextImage = () => {
 		setCurrentImageIndex((prevIndex) => (prevIndex + 1) % exampleImages.length)
 	}
 
-	// Function to go to the previous image
 	const prevImage = () => {
 		setCurrentImageIndex(
 			(prevIndex) =>
@@ -26,115 +26,144 @@ export default function Cooledtured() {
 	}
 
 	return (
-		<div className='grid place-items-center'>
-			<div className=''>
-				<div className='p-4 max-w-[65ch] flex flex-col gap-4'>
-					<div className='flex flex-col sm:flex-row justify-center items-center gap-8'>
-						<h1 className='font-bold text-4xl sm:text-5xl'>
-							Portfolio-V1: React
-						</h1>
-						<img
-							src='/images/reactfolio-v1/react-js-icon.svg'
-							alt='React logo'
-							className='aspect-square size-20'
-						/>
+		<div className='relative flex flex-col items-center max-w-[80rem] mx-0 sm:mx-6 lg:mx-8 my-4 sm:my-8 py-6 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700'>
+			{/* Decorative Accents */}
+			<div className='absolute inset-x-0 top-0 h-4 bg-gradient-to-r from-blue-500 via-amber-500 to-purple-600'></div>
+			<div className='absolute inset-x-0 bottom-0 h-4 bg-gradient-to-r from-green-500 via-amber-500 to-pink-600'></div>
+
+			{/* Header Section */}
+			<header className='text-center mb-8'>
+				<div className='flex flex-col sm:flex-row justify-center items-center gap-6'>
+					<h1 className='text-4xl sm:text-5xl font-extrabold text-blue-500 tracking-wide'>
+						Resume
+					</h1>
+					<img
+						src='/images/resume/HTML5-logo.svg'
+						alt='HTML5 logo'
+						className='w-20 h-20 sm:w-24 sm:h-24 rounded-lg shadow-lg saturate-150'
+					/>
+				</div>
+				<p className='text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto bg-gray-950 py-3 px-5 rounded-lg shadow-md'>
+					A showcase of my creative resume design using HTML, JavaScript, and
+					CSS—blending functionality and style.
+				</p>
+			</header>
+
+			{/* Project Description Section */}
+			<section className='w-full px-4 sm:px-6 lg:px-8 mb-12'>
+				<div className='bg-gray-950 text-gray-300 p-6 rounded-lg shadow-md border border-gray-800 space-y-6'>
+					<p>
+						My Resume was created using only HTML, JavaScript, and CSS. These
+						days I focus more on Remix-Run, so updating this file was a
+						nostalgic experience.
+					</p>
+					<div className='flex justify-center'>
+						<a
+							href='https://klowden.github.io/Resume'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-amber-500 text-gray-100 font-bold rounded-lg shadow-md hover:scale-105 active:scale-95 transition-all'
+						>
+							<span>Access the Resume</span>
+							<HiOutlineArrowNarrowRight className='text-xl' />
+						</a>
 					</div>
-					<div className='indent-4 flex flex-col gap-4 mb-4'>
-						<p>
-							My original Portfolio was developed inside of React, and was also
-							coincidentally my first time utilizing React for anything, so
-							needless to say there were alot of misses and frustration building
-							this site.
-						</p>
-						<p>
-							This is no longer published to my GitHub Pages simply due to it
-							being deprecated. I've switched to using a Remix-Run based
-							portfolio instead <em>(the one you are currently in)</em>, so
-							there's no need to keep the other running.
-						</p>
-						<p>
-							I've made some small updates to the code when I was attempting to
-							revamp it, but I missed Remix and ended up starting over from
-							scratch with a more clean-feeling project.
-						</p>
-						<div className='indent-0'>
-							<h3 className='font-bold mb-2'>Important Notes:</h3>
-							<ul className='list-disc list-inside flex flex-col gap-4'>
-								<li className='indent-4'>
-									Originally I had utilize a canvas to create outwardly
-									expanding ripples of varying sizes when the user clicked
-									anywhere on the screen. The colors shifted based on random
-									selection of a pre-defined color schema, and I enjoyed it at
-									the time; However, this proved to be quite resource heavy.
-								</li>
-								<li className='indent-4'>
-									I opted to remove the Canvas Element from my portfolio since
-									it isn't the best experience on a page, and I've since opted
-									for the more minimalist approach.
-								</li>
-								<li className='indent-4'>
-									Time was not kind to my styling. Upon running Npm Update many
-									things seemed to shift around, which was ultimately my sign to
-									abandon this framework for one I wanted to keep working in.
-								</li>
-							</ul>
-						</div>
+					<p>
+						Full Disclosure: This document isn't optimized for mobile. If you're
+						on a mobile device, consider viewing it in desktop mode.
+					</p>
+					<p>
+						This resume features an interactive background that responds to
+						mouse movements. Circles clump and grow near the cursor and explode
+						upon clicking.
+					</p>
+					<div>
+						<h3 className='font-bold text-xl text-blue-500 underline underline-offset-4 decoration-purple-600'>
+							Important Points:
+						</h3>
+						<ul className='list-disc list-inside space-y-4 text-gray-300 pl-5'>
+							<li>
+								I've worked on various projects, including overhauling a
+								client's e-commerce website from scratch—an extensive task,
+								especially with a new framework.
+							</li>
+							<li>
+								The Cooledtured V3 Project is my most extensive work experience.
+								I led a team of 10 developers, collaborating with management and
+								UI/UX teams, gaining expertise in Remix-Run projects.
+							</li>
+							<li>
+								I've embraced TailwindCSS for this project, which works well due
+								to the dynamic routing in place. Otherwise, I prefer SCSS for
+								scalability.
+							</li>
+						</ul>
 					</div>
 				</div>
-			</div>
-			{/* Image carousel container */}
-			<div className='flex place-items-center mx-auto max-w-[60rem] h-[28rem] sm:h-[34rem] w-full px-4 pb-4 rounded-md gap-2'>
-				<FaAngleLeft
-					onClick={prevImage}
-					className='text-6xl cursor-pointer'
-				/>
-				<div className='w-full h-full flex flex-col place-content-center'>
-					<a
-						href={exampleImages[currentImageIndex].url}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='flex relative justify-center font-bold text-amber-500 bg-gray-900 rounded-t-lg px-4 pb-4 pt-3'
+			</section>
+
+			{/* Carousel Section */}
+			<section className='w-full mt-8 px-4 sm:px-6 lg:px-8'>
+				<h2 className='text-center text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-amber-500 to-pink-600 mb-12'>
+					Carousel Showcase
+				</h2>
+				<div className='relative flex items-center justify-center mx-auto max-w-[60rem] h-[28rem] sm:h-[34rem] w-full px-4 pb-4 rounded-lg shadow-lg border border-gray-800 bg-gray-950'>
+					<button
+						onClick={prevImage}
+						className='absolute left-4 bg-gradient-to-br from-gray-800 to-blue-600 text-gray-100 text-3xl sm:text-4xl p-5 rounded-lg hover:from-amber-500 hover:to-purple-700 hover:scale-110 active:scale-90 transition-transform duration-150 ease-out z-10'
 					>
-						<h3 className='flex w-max justify-center text-center text-xl sm:text-2xl md:text-3xl hover:text-blue-800 transition-all duration-150 ease-out hover:scale-[102%] active:scale-95'>
-							{exampleImages[currentImageIndex].title}
-						</h3>
-						<p className='absolute right-2 top-2 z-10 text-xs sm:text-base hover:text-blue-800 transition-all duration-150 ease-out hover:scale-[102%] active:scale-95'>
-							{currentImageIndex + 1}/{exampleImages.length}
-						</p>
-					</a>
-					<div className='place-items-center justify-center flex aspect-video w-full bg-slate-700 rounded-b-lg shadow-md p-4 gap-4'>
+						<HiOutlineArrowNarrowLeft />
+					</button>
+					<div className='w-full h-full flex flex-col items-center'>
+						<a
+							href={exampleImages[currentImageIndex].url}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='flex relative justify-center font-bold text-amber-500 bg-gray-900 rounded-t-lg px-4 pb-4 pt-3 shadow-md border-b border-gray-800'
+						>
+							<h3 className='text-center text-2xl sm:text-3xl text-blue-500 font-bold hover:text-purple-600 transition-colors'>
+								{exampleImages[currentImageIndex].title}
+							</h3>
+						</a>
 						<img
 							src={exampleImages[currentImageIndex].src}
 							alt={exampleImages[currentImageIndex].alt}
-							className='h-auto max-h-80 sm:max-h-[28rem] object-contain rounded-lg shadow-md select-none'
+							className='h-auto max-h-80 sm:max-h-[28rem] object-contain rounded-b-lg shadow-md'
 						/>
 					</div>
+					<button
+						onClick={nextImage}
+						className='absolute right-4 bg-gradient-to-br from-gray-800 to-blue-600 text-gray-100 text-3xl sm:text-4xl p-5 rounded-lg hover:from-amber-500 hover:to-purple-700 hover:scale-110 active:scale-90 transition-transform duration-150 ease-out z-10'
+					>
+						<HiOutlineArrowNarrowRight />
+					</button>
 				</div>
-				<FaAngleRight
-					onClick={nextImage}
-					className='text-6xl cursor-pointer'
-				/>
-			</div>
-			<div className='overflow-x-scroll p-4 max-w-full lg:max-w-[60rem]'>
-				<div className='grid grid-flow-col grid-rows-2 gap-4 p-4'>
+			</section>
+
+			{/* Thumbnail Grid Section */}
+			<section className='w-full mt-8 px-4 sm:px-6 lg:px-8'>
+				<h2 className='text-center text-3xl font-bold text-amber-500 mb-6'>
+					Thumbnail Gallery
+				</h2>
+				<div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4'>
 					{exampleImages.map((image, index) => (
 						<div
 							key={index}
-							className='cursor-pointer w-32 sm:w-36 flex flex-col'
+							className='cursor-pointer flex flex-col items-center bg-gray-950 border border-gray-800 rounded-md shadow-md hover:scale-105 transition-transform'
 							onClick={() => setImageIndex(index)}
 						>
-							<h3 className='truncate text-sm text-center bg-black text-white rounded-t-md font-medium'>
+							<h3 className='text-center text-sm bg-gray-800 text-gray-100 py-1 w-full rounded-t-md font-sans font-semibold truncate'>
 								{image.title}
 							</h3>
 							<img
 								src={image.src}
 								alt={image.alt}
-								className='w-full h-full aspect-square object-cover rounded-b-md shadow-lg hover:opacity-75 transition-opacity duration-150'
+								className='w-full h-full aspect-square object-contain p-2'
 							/>
 						</div>
 					))}
 				</div>
-			</div>
+			</section>
 		</div>
 	)
 }

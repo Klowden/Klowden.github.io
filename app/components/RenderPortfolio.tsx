@@ -2,34 +2,42 @@ import { Link } from "@remix-run/react"
 
 const renderPortfolio = (portfolio: any) => {
 	return (
-		<div className='flex gap-4 flex-wrap'>
-			{portfolio.map((port: any, idx: number) => {
-				return (
-					<div
-						className='image-box relative flex flex-grow flex-shrink basis-1/5 h-80 place-content-center  rounded-lg max-w-72 w-full overflow-clip hover:after:opacity-30 after:transition-all after:duration-300 after:ease-portfolio after:bg-gradient-to-t after:from-[#ffd700] after:to-black after:bottom-0 after:absolute after:w-full after:h-full after:z-[2] after:opacity-0 group transition-all duration-200 ease-in'
-						key={idx}
-					>
-						<img
-							className='portfolio-image relative z-[2] object-contain h-full aspect-square'
-							src={port.image}
-							alt='porfolio'
-						/>
-						<div className='content group-hover:bottom-0 w-full absolute z-[3] py-3 px-5 transition-all duration-300 ease-portfolio bottom-[-4.2rem] hover:bottom-0 hover:bg-transparent bg-gradient-to-t from-black from-40% to-100%'>
-							<p className='title my-0 text-white text-[1.5rem] leading-6 font-medium'>
-								{port.name}
-							</p>
-							<h4 className='description text-[0.9rem] mb-[0.4rem] text-white font-normal'>
-								{port.description}
-							</h4>
-							<Link to={`/portfolio/${port.component}`}>
-								<button className='btn mt-8 mb-[0.65rem] px-5 h-10 text-[0.9rem] leading-[2.1rem] border-4 border-[#ffd700] rounded-md text-white bg-transparent uppercase font-medium transition-all duration-300 ease-portfolio cursor-pointer hover:translate-y-[-0.2rem] hover:bg-[#ffd700] hover:text-black hover:font-bold'>
-									View
-								</button>
-							</Link>
-						</div>
+		<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-4 sm:px-6 lg:px-8'>
+			{portfolio.map((port: any, idx: number) => (
+				<div
+					className='relative group w-full h-80 bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl'
+					key={idx}
+				>
+					{/* Image */}
+					<img
+						className='absolute inset-0 w-full h-full object-contain z-10'
+						src={port.image}
+						alt={port.name}
+					/>
+
+					{/* Name Always Visible */}
+					<div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-full text-center bg-black bg-opacity-70 text-white text-xl font-bold py-2 px-4 z-20 shadow-md'>
+						{port.name}
 					</div>
-				)
-			})}
+
+					{/* Gradient Overlay */}
+					<div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 z-20'></div>
+
+					{/* Description and Button */}
+					<div className='absolute bottom-0 left-0 w-full p-4 z-30 text-white transform sm:translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out bg-gradient-to-t from-black via-gray-800 to-transparent'>
+						<p className='text-base font-semibold leading-relaxed text-gray-100 text-shadow-lg'>
+							{port.description}
+						</p>
+
+						{/* Button Always Visible on Mobile */}
+						<Link to={`/portfolio/${port.component}`}>
+							<button className='mt-4 px-6 py-2 bg-transparent border-2 border-amber-500 text-amber-500 font-bold rounded-md uppercase tracking-wider shadow-md transition-all duration-300 ease-in-out hover:bg-amber-500 hover:text-black hover:scale-105'>
+								View
+							</button>
+						</Link>
+					</div>
+				</div>
+			))}
 		</div>
 	)
 }

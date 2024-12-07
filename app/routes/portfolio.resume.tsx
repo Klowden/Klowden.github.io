@@ -1,19 +1,19 @@
 import { SetStateAction, useState } from "react"
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6"
+import {
+	HiOutlineArrowNarrowLeft,
+	HiOutlineArrowNarrowRight,
+} from "react-icons/hi"
 import imageData from "../data/resumeData.json"
 
-export default function Cooledtured() {
+export default function Resume() {
 	const exampleImages = imageData.ExampleImages
 
-	// State to keep track of the current image index
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-	// Function to go to the next image
 	const nextImage = () => {
 		setCurrentImageIndex((prevIndex) => (prevIndex + 1) % exampleImages.length)
 	}
 
-	// Function to go to the previous image
 	const prevImage = () => {
 		setCurrentImageIndex(
 			(prevIndex) =>
@@ -26,125 +26,142 @@ export default function Cooledtured() {
 	}
 
 	return (
-		<div className='grid place-items-center'>
-			<div className=''>
-				<div className='p-4 max-w-[70ch] flex flex-col gap-4'>
-					<div className='flex flex-col sm:flex-row justify-center items-center gap-8'>
-						<h1 className='font-bold text-4xl sm:text-5xl'>Resume</h1>
-						<img
-							src='/images/resume/HTML5-logo.svg'
-							alt='HTML logo'
-							className='aspect-square size-20'
-						/>
-					</div>
-					<div className=' flex flex-col gap-4 mb-4'>
-						<p className='indent-4'>
-							My Resume was created using only HTML, JavaScript, and CSS. These
-							days I tend to focus more on Remix-Run than other frameworks so it
-							was a bit of a throwback updating this file.
-						</p>
-						<a
-							href='https://klowden.github.io/Resume'
-							target='_blank'
-							rel='noopener noreferrer'
-							className='indent-0 w-max'
-						>
-							<p className='hover:text-blue-700 text-black font-bold'>
-								Access the Resume Directly HERE
-							</p>
-						</a>
-						<p className='indent-4'>
-							Full Disclosure, this Document is not developed with Mobile
-							Compatibility in mind. It's a resume. If you must use a mobile
-							device, please view in desktop mode.
-						</p>
-						<p className='indent-4'>
-							I designed this resume with a little goal of having a background
-							that moves around according to your mouse position. The circles
-							clump and grow when within a certain distance of the mouse, and
-							explode away onClick.
-						</p>
-						<div>
-							<h3 className='font-bold'>Important Points:</h3>
-							<ul className='flex flex-col gap-4 list-inside list-disc'>
-								<li className='indent-4'>
-									I've worked on various projects included the complete overhaul
-									of a client's ecommerce website from scratch due to changing
-									the framework they were on, which is a huge task, especially
-									due to the framework being brand new to me at the time.
-								</li>
-								<li className='indent-4'>
-									The Cooledtured V3 Project is my best example of work
-									experience and the project I've done the most in. I was the
-									team lead of 10 developers and worked tirelessly with
-									management, the ui/ix team, and my developers to get this site
-									functional, and it has made we great working inside of
-									Remix-Run projects.
-								</li>
-								<li className='indent-4'>
-									I've made a push to utilize TailwindCss in this project, which
-									only works well for it due to the dynamic routing in place -
-									otherwise I would have utilized SCSS by preference for more
-									scalable maintenance needs.
-								</li>
-							</ul>
-						</div>
-					</div>
+		<div className='relative flex flex-col items-center max-w-[80rem] mx-0 sm:mx-6 lg:mx-8 my-4 sm:my-8 py-6 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700'>
+			{/* Decorative Accents */}
+			<div className='absolute inset-x-0 top-0 h-4 bg-gradient-to-r from-blue-500 via-amber-500 to-purple-600'></div>
+			<div className='absolute inset-x-0 bottom-0 h-4 bg-gradient-to-r from-green-500 via-amber-500 to-pink-600'></div>
+
+			{/* Header Section */}
+			<header className='text-center mb-8'>
+				<div className='flex flex-col sm:flex-row justify-center items-center gap-6'>
+					<h1 className='text-4xl sm:text-5xl font-extrabold text-blue-500 tracking-wide'>
+						Resume
+					</h1>
+					<img
+						src='/images/resume/HTML5-logo.svg'
+						alt='HTML5 logo'
+						className='w-20 h-20 sm:w-24 sm:h-24 rounded-lg shadow-lg saturate-150 mb-4'
+					/>
 				</div>
-			</div>
-			{/* Image carousel container */}
-			<div className='flex place-items-center mx-auto max-w-[60rem] h-[28rem] sm:h-[34rem] w-full px-4 pb-4 rounded-md gap-2'>
-				<FaAngleLeft
-					onClick={prevImage}
-					className='text-6xl cursor-pointer'
-				/>
-				<div className='w-full h-full flex flex-col place-content-center'>
+				<p className='text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto bg-gray-950 py-3 px-5 rounded-lg shadow-md'>
+					A showcase of my creative resume design using HTML, JavaScript, and
+					CSS—blending functionality and style.
+				</p>
+			</header>
+
+			{/* Project Description Section */}
+			<section className='w-full px-4 sm:px-6 lg:px-8 mb-8'>
+				<div className='bg-gray-950 text-gray-300 p-6 rounded-lg shadow-md border border-gray-800 space-y-6'>
+					<p>
+						My Resume was created using only HTML, JavaScript, and CSS. These
+						days I focus more on Remix-Run, so updating this file was a
+						nostalgic experience.
+					</p>
 					<a
-						href={exampleImages[currentImageIndex].url}
+						href='https://klowden.github.io/Resume'
 						target='_blank'
 						rel='noopener noreferrer'
-						className='flex relative justify-center font-bold text-amber-500 bg-gray-900 rounded-t-lg px-4 pb-4 pt-3'
+						className='inline-flex items-center justify-center px-6 py-3 bg-gradient-to-l from-blue-700 to-gray-700 text-gray-100 text-lg font-bold rounded-lg shadow-md hover:from-blue-700 hover:to-blue-500 hover:scale-105 active:scale-95 transition-all duration-150 ease-in-out'
 					>
-						<h3 className='flex w-max justify-center text-center text-xl sm:text-2xl md:text-3xl hover:text-blue-800 transition-all duration-150 ease-out hover:scale-[102%] active:scale-95'>
-							{exampleImages[currentImageIndex].title}
-						</h3>
-						<p className='absolute right-2 top-2 z-10 text-xs sm:text-base hover:text-blue-800 transition-all duration-150 ease-out hover:scale-[102%] active:scale-95'>
-							{currentImageIndex + 1}/{exampleImages.length}
-						</p>
+						Access the Resume Directly Here
 					</a>
-					<div className='place-items-center justify-center flex aspect-video w-full bg-slate-700 rounded-b-lg shadow-md p-4 gap-4'>
+
+					<p>
+						Full Disclosure: This document isn't optimized for mobile. If you're
+						on a mobile device, consider viewing it in desktop mode.
+					</p>
+					<p>
+						This resume features an interactive background that responds to
+						mouse movements. Circles clump and grow near the cursor and explode
+						upon clicking.
+					</p>
+					<div>
+						<h3 className='font-bold text-xl text-blue-500 underline underline-offset-4 decoration-purple-600'>
+							Important Points:
+						</h3>
+						<ul className='list-disc list-inside space-y-4 text-gray-300 pl-5'>
+							<li>
+								I've worked on various projects, including overhauling a
+								client's e-commerce website from scratch—an extensive task,
+								especially with a new framework.
+							</li>
+							<li>
+								The Cooledtured V3 Project is my most extensive work experience.
+								I led a team of 10 developers, collaborating with management and
+								UI/UX teams, gaining expertise in Remix-Run projects.
+							</li>
+							<li>
+								I've embraced TailwindCSS for this project, which works well due
+								to the dynamic routing in place. Otherwise, I prefer SCSS for
+								scalability.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			{/* Carousel Section */}
+			<section className='w-full mt-8 px-4 sm:px-6 lg:px-8'>
+				<h2 className='text-center text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-amber-500 to-pink-600 mb-12'>
+					Carousel Showcase
+				</h2>
+				<div className='relative flex items-center justify-center mx-auto max-w-[60rem] h-[28rem] sm:h-[34rem] w-full px-4 pb-4 rounded-lg shadow-lg border border-gray-800 bg-gray-950'>
+					<button
+						onClick={prevImage}
+						className='absolute left-4 bg-gradient-to-br from-gray-800 to-blue-600 text-gray-100 text-3xl sm:text-4xl p-5 rounded-lg hover:from-amber-500 hover:to-purple-700 hover:scale-110 active:scale-90 transition-transform duration-150 ease-out z-10'
+					>
+						<HiOutlineArrowNarrowLeft />
+					</button>
+					<div className='w-full h-full flex flex-col items-center'>
+						<a
+							href={exampleImages[currentImageIndex].url}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='flex relative justify-center font-bold text-amber-500 bg-gray-900 rounded-t-lg px-4 pb-4 pt-3 shadow-md border-b border-gray-800'
+						>
+							<h3 className='text-center text-2xl sm:text-3xl text-blue-500 font-bold hover:text-purple-600 transition-colors'>
+								{exampleImages[currentImageIndex].title}
+							</h3>
+						</a>
 						<img
 							src={exampleImages[currentImageIndex].src}
 							alt={exampleImages[currentImageIndex].alt}
-							className='h-auto max-h-80 sm:max-h-[28rem] object-contain rounded-lg shadow-md select-none'
+							className='h-auto max-h-80 sm:max-h-[28rem] object-contain rounded-b-lg shadow-md'
 						/>
 					</div>
+					<button
+						onClick={nextImage}
+						className='absolute right-4 bg-gradient-to-br from-gray-800 to-blue-600 text-gray-100 text-3xl sm:text-4xl p-5 rounded-lg hover:from-amber-500 hover:to-purple-700 hover:scale-110 active:scale-90 transition-transform duration-150 ease-out z-10'
+					>
+						<HiOutlineArrowNarrowRight />
+					</button>
 				</div>
-				<FaAngleRight
-					onClick={nextImage}
-					className='text-6xl cursor-pointer'
-				/>
-			</div>
-			<div className='overflow-x-scroll p-4 max-w-full lg:max-w-[60rem]'>
-				<div className='grid grid-flow-col grid-rows-2 gap-4 p-4'>
+			</section>
+
+			{/* Thumbnail Grid Section */}
+			<section className='w-full mt-8 px-4 sm:px-6 lg:px-8'>
+				<h2 className='text-center text-3xl font-bold text-amber-500 mb-6'>
+					Thumbnail Gallery
+				</h2>
+				<div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4'>
 					{exampleImages.map((image, index) => (
 						<div
 							key={index}
-							className='cursor-pointer w-32 sm:w-36 flex flex-col'
+							className='cursor-pointer flex flex-col items-center bg-gray-950 border border-gray-800 rounded-md shadow-md hover:scale-105 transition-transform'
 							onClick={() => setImageIndex(index)}
 						>
-							<h3 className='truncate text-sm text-center bg-black text-white rounded-t-md font-medium'>
+							<h3 className='text-center text-sm bg-gray-800 text-gray-100 py-1 w-full rounded-t-md font-sans font-semibold truncate'>
 								{image.title}
 							</h3>
 							<img
 								src={image.src}
 								alt={image.alt}
-								className='w-full h-full aspect-square object-cover rounded-b-md shadow-lg hover:opacity-75 transition-opacity duration-150'
+								className='w-full h-full aspect-square object-contain p-2'
 							/>
 						</div>
 					))}
 				</div>
-			</div>
+			</section>
 		</div>
 	)
 }
