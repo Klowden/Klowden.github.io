@@ -45,12 +45,12 @@ jobs:
           VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
           VITE_FIREBASE_SENDER_ID: ${{ secrets.VITE_FIREBASE_SENDER_ID }}
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
-      - name: Clean previous build files
-        run: rm -rf build docs
       - name: Reorganize files for GitHub Pages
         run: mv build/client/* build/
       - name: Move build output to docs
-        run: cp -r build/* ./docs
+        run: cp -r build/* ./
+      - name: Cleanup previous artifacts
+        run: rm -rf artifacts
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
@@ -58,7 +58,7 @@ jobs:
         with:
           # Upload entire repository
           path: "."
-          name: unique-artifact-name
+          name: github-pages-artifact
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
