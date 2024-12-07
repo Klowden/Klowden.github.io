@@ -5,6 +5,7 @@ import {
 	FaUser, // About icon
 	FaHouseChimney, // Home icon
 	FaScrewdriverWrench, // Skills icon
+	FaGamepad, // Game Dev icon
 } from "react-icons/fa6"
 
 // Header component definition
@@ -80,6 +81,23 @@ export default function Header() {
 				>
 					<FaScrewdriverWrench className='text-2xl' />
 					<span className='text-sm xs:text-base'>Skills</span>
+				</NavLink>
+
+				{/* Game Dev section link */}
+				<NavLink
+					prefetch='intent'
+					to='/game-dev' // Links to the Game Dev route
+					end
+					className={({ isActive }) =>
+						`flex flex-col items-center gap-1 px-4 pt-2 pb-1 transition-all duration-200 ease-in-out ${
+							isActive
+								? "text-gray-100 scale-105" // Active link styles
+								: "hover:text-amber-400 hover:-translate-y-1 hover:scale-[102%]" // Hover styles
+						}`
+					}
+				>
+					<FaGamepad className='text-2xl' />
+					<span className='text-sm xs:text-base'>Game Dev</span>
 				</NavLink>
 
 				{/* Contact section link */}
