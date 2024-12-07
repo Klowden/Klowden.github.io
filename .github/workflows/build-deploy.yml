@@ -29,13 +29,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the repository
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install
+
+      # Step 2: Install dependencies
+      - name: Install dependencies
         run: npm ci
-      - name: Build
+
+      # Step 3: Build the project
+      - name: Build the project
         run: npm run build
         env:
+          # Passing secrets as environment variables for the build process
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
@@ -45,20 +51,36 @@ jobs:
           VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
           VITE_FIREBASE_SENDER_ID: ${{ secrets.VITE_FIREBASE_SENDER_ID }}
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+
+      # Step 4: Reorganize files for GitHub Pages
+      # This moves files from the build/client directory (if it exists) to build
       - name: Reorganize files for GitHub Pages
-        run: mv build/client/* build/
-      - name: Move build output to docs
+        run: |
+          if [ -d "build/client" ]; then
+            mv build/client/* build/
+          fi
+
+      # Step 5: Move the build output to the root directory
+      - name: Move build output to root
         run: cp -r build/* ./
+
+      # Step 6: Cleanup previous artifacts if any exist
       - name: Cleanup previous artifacts
-        run: rm -rf artifacts
+        run: rm -rf artifacts || true
+
+      # Step 7: Setup GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      # Step 8: Upload the build output as an artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Uploading all files in the current directory as the artifact
           path: "."
-          name: github-pages-artifact
+          name: github-pages
+
+      # Step 9: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
