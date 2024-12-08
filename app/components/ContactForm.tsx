@@ -11,14 +11,14 @@ const ContactForm = () => {
 	const [showSendErrorPopup, setShowSendErrorPopup] = useState(false)
 	const [showSendSuccessPopup, setShowSendSuccessPopup] = useState(false)
 
+	// Utility function to validate email format
 	const isValidEmail = (email: string) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 		return emailRegex.test(email)
 	}
 
-	// Phone number formatting function
+	// Utility function to format phone numbers
 	const formatPhoneNumber = (value: string) => {
-		// Remove all non-digit characters
 		const cleaned = value.replace(/\D/g, "")
 		const match = cleaned.match(/^(\d{1,3})(\d{0,3})(\d{0,4})$/)
 		if (match) {
@@ -35,10 +35,12 @@ const ContactForm = () => {
 		return value
 	}
 
+	// Handles changes in the phone number field
 	const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setPhoneNumber(formatPhoneNumber(e.target.value))
 	}
 
+	// Handles form submission
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 
@@ -74,17 +76,30 @@ const ContactForm = () => {
 	}
 
 	return (
-		<div className='flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-6 py-4'>
+		<div
+			className='flex flex-col items-center justify-center bg-gradient-to-bl from-gray-950 sm:from-gray-900 via-gray-800 to-gray-950 sm:to-gray-900 px-4 sm:px-6 py-4'
+			aria-labelledby='contact-form-title'
+		>
 			{/* Form container */}
 			<form
 				ref={formRef}
 				onSubmit={handleSubmit}
 				className='w-full max-w-2xl bg-gray-950 border-2 border-amber-500 shadow-md rounded-lg p-6'
+				aria-describedby='contact-form-instructions'
 			>
 				{/* Header */}
-				<h2 className='text-center text-3xl font-bold text-amber-500 mb-4'>
+				<h2
+					id='contact-form-title'
+					className='text-center text-3xl font-bold text-amber-500 mb-4'
+				>
 					Get in Touch
 				</h2>
+				<p
+					id='contact-form-instructions'
+					className='text-center text-sm text-gray-300 mb-6'
+				>
+					Fill out the form below to send a message. All fields are required.
+				</p>
 
 				{/* Form fields */}
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -105,6 +120,7 @@ const ContactForm = () => {
 							placeholder='Your Name'
 							required
 							className='w-full p-2 rounded-lg bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500'
+							aria-required='true'
 						/>
 					</div>
 
@@ -144,6 +160,7 @@ const ContactForm = () => {
 							placeholder='Your Email'
 							required
 							className='w-full p-2 rounded-lg bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500'
+							aria-required='true'
 						/>
 					</div>
 
@@ -163,6 +180,7 @@ const ContactForm = () => {
 							placeholder='Write your message here...'
 							required
 							className='w-full p-2 rounded-lg bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none h-32'
+							aria-required='true'
 						></textarea>
 					</div>
 				</div>
@@ -171,6 +189,7 @@ const ContactForm = () => {
 				<button
 					type='submit'
 					className='w-full mt-4 py-2 text-lg font-semibold text-gray-900 bg-amber-500 hover:bg-amber-600 rounded-lg shadow-md transition-all duration-150 ease-in-out glow-effect-orange active:scale-95'
+					aria-label='Send Message'
 				>
 					Send Message
 				</button>
@@ -178,7 +197,11 @@ const ContactForm = () => {
 
 			{/* Success Popup */}
 			{showSendSuccessPopup && (
-				<div className='fixed bottom-4 right-4 bg-green-600 text-white p-3 rounded-lg shadow-md flex items-center gap-2'>
+				<div
+					role='alert'
+					aria-live='assertive'
+					className='fixed bottom-4 right-4 bg-green-600 text-white p-3 rounded-lg shadow-md flex items-center gap-2'
+				>
 					<FaCheckCircle className='text-xl' />
 					<span>Message sent successfully!</span>
 				</div>
@@ -186,7 +209,11 @@ const ContactForm = () => {
 
 			{/* Error Popup */}
 			{showSendErrorPopup && (
-				<div className='fixed bottom-4 right-4 bg-red-600 text-white p-3 rounded-lg shadow-md flex items-center gap-2'>
+				<div
+					role='alert'
+					aria-live='assertive'
+					className='fixed bottom-4 right-4 bg-red-600 text-white p-3 rounded-lg shadow-md flex items-center gap-2'
+				>
 					<FaTimesCircle className='text-xl' />
 					<span>Failed to send message. Please try again.</span>
 				</div>

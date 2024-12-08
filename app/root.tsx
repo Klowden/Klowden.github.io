@@ -35,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<div className='sticky top-0 z-[100]'>
 					<Header />
 				</div>
-				<div className='flex-1 bg-gray-400'>{children}</div>
+				<div className='flex-1 bg-gray-600'>{children}</div>
 				<div>
 					<Footer />
 				</div>

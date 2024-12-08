@@ -1,22 +1,45 @@
 export default function PrivacyPolicy() {
 	return (
-		<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-4 sm:my-8 py-8 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700 text-gray-300'>
+		<div
+			className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-4 sm:my-8 py-8 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700 text-gray-300'
+			role='main'
+			aria-labelledby='privacy-policy-title'
+		>
 			{/* Header Section */}
-			<header className='text-center mb-8'>
-				<h1 className='text-4xl sm:text-5xl font-extrabold text-amber-500'>
+			<header
+				className='text-center mb-8'
+				role='banner'
+				aria-labelledby='privacy-policy-title'
+			>
+				<h1
+					id='privacy-policy-title'
+					className='text-4xl sm:text-5xl font-extrabold text-amber-500'
+				>
 					Privacy Policy
 				</h1>
-				<p className='text-lg text-gray-400 mt-4 leading-relaxed'>
+				<p
+					className='text-lg text-gray-400 mt-4 leading-relaxed'
+					aria-describedby='privacy-policy-description'
+				>
 					Your privacy is important. This page explains how your information is
 					collected, used, and protected when working with me.
 				</p>
 			</header>
 
 			{/* Policy Content Section */}
-			<section className='space-y-6'>
+			<section
+				className='space-y-6'
+				aria-labelledby='policy-content-title'
+			>
 				{/* Information Collection */}
-				<div>
-					<h2 className='text-2xl font-bold text-purple-500 mb-4'>
+				<div
+					role='region'
+					aria-labelledby='information-collection-title'
+				>
+					<h2
+						id='information-collection-title'
+						className='text-2xl font-bold text-purple-500 mb-4'
+					>
 						Information I Collect
 					</h2>
 					<p>
@@ -40,8 +63,14 @@ export default function PrivacyPolicy() {
 				</div>
 
 				{/* How Information is Used */}
-				<div>
-					<h2 className='text-2xl font-bold text-green-500 mb-4'>
+				<div
+					role='region'
+					aria-labelledby='information-usage-title'
+				>
+					<h2
+						id='information-usage-title'
+						className='text-2xl font-bold text-green-500 mb-4'
+					>
 						How I Use Your Information
 					</h2>
 					<p>Your information is used solely to:</p>
@@ -54,8 +83,14 @@ export default function PrivacyPolicy() {
 				</div>
 
 				{/* Information Sharing */}
-				<div>
-					<h2 className='text-2xl font-bold text-blue-500 mb-4'>
+				<div
+					role='region'
+					aria-labelledby='information-sharing-title'
+				>
+					<h2
+						id='information-sharing-title'
+						className='text-2xl font-bold text-blue-500 mb-4'
+					>
 						Information Sharing
 					</h2>
 					<p>
@@ -76,8 +111,14 @@ export default function PrivacyPolicy() {
 				</div>
 
 				{/* Data Security */}
-				<div>
-					<h2 className='text-2xl font-bold text-pink-500 mb-4'>
+				<div
+					role='region'
+					aria-labelledby='data-security-title'
+				>
+					<h2
+						id='data-security-title'
+						className='text-2xl font-bold text-pink-500 mb-4'
+					>
 						Data Security
 					</h2>
 					<p>
@@ -88,8 +129,14 @@ export default function PrivacyPolicy() {
 				</div>
 
 				{/* Your Rights */}
-				<div>
-					<h2 className='text-2xl font-bold text-amber-500 mb-4'>
+				<div
+					role='region'
+					aria-labelledby='your-rights-title'
+				>
+					<h2
+						id='your-rights-title'
+						className='text-2xl font-bold text-amber-500 mb-4'
+					>
 						Your Rights
 					</h2>
 					<p>You have the right to:</p>
@@ -107,17 +154,29 @@ export default function PrivacyPolicy() {
 				</div>
 
 				{/* Contact Information */}
-				<div>
-					<h2 className='text-2xl font-bold text-red-500 mb-4'>Contact Me</h2>
+				<div
+					role='region'
+					aria-labelledby='contact-me-title'
+				>
+					<h2
+						id='contact-me-title'
+						className='text-2xl font-bold text-red-500 mb-4'
+					>
+						Contact Me
+					</h2>
 					<p>
 						If you have any questions or concerns about this Privacy Policy,
 						please feel free to contact me at:
 					</p>
-					<address className='mt-4 not-italic'>
+					<address
+						className='mt-4 not-italic'
+						aria-label='Contact Information'
+					>
 						<strong>Email:</strong>{" "}
 						<a
 							href='mailto:KlowdenSolutions@gmail.com'
 							className='text-blue-400 hover:underline'
+							aria-label='Email Klowden Solutions'
 						>
 							KlowdenSolutions@gmail.com
 						</a>
@@ -126,7 +185,10 @@ export default function PrivacyPolicy() {
 			</section>
 
 			{/* Decorative Divider */}
-			<div className='w-full h-1 mt-12 bg-gradient-to-r from-purple-600 via-amber-500 to-pink-600 rounded-full'></div>
+			<div
+				className='w-full h-1 mt-12 bg-gradient-to-r from-purple-600 via-amber-500 to-pink-600 rounded-full'
+				aria-hidden='true'
+			></div>
 		</div>
 	)
 }

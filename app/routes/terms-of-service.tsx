@@ -1,22 +1,43 @@
 export default function TermsOfService() {
 	return (
-		<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-4 sm:my-8 py-8 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700 text-gray-300'>
+		<div
+			className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 my-4 sm:my-8 py-8 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg border border-gray-700 text-gray-300'
+			role='main'
+			aria-labelledby='terms-header'
+		>
 			{/* Header Section */}
-			<header className='text-center mb-8'>
-				<h1 className='text-4xl sm:text-5xl font-extrabold text-amber-500'>
+			<header
+				className='text-center mb-8'
+				role='banner'
+				aria-labelledby='terms-header'
+			>
+				<h1
+					id='terms-header'
+					className='text-4xl sm:text-5xl font-extrabold text-amber-500'
+				>
 					Terms of Service
 				</h1>
-				<p className='text-lg text-gray-400 mt-4 leading-relaxed'>
+				<p
+					className='text-lg text-gray-400 mt-4 leading-relaxed'
+					aria-describedby='terms-description'
+				>
 					Please read these terms of service carefully before engaging with my
 					services.
 				</p>
 			</header>
 
 			{/* Terms Content Section */}
-			<section className='space-y-6'>
+			<section
+				className='space-y-6'
+				role='region'
+				aria-labelledby='terms-content'
+			>
 				{/* Services */}
 				<div>
-					<h2 className='text-2xl font-bold text-purple-500 mb-4'>
+					<h2
+						id='terms-services'
+						className='text-2xl font-bold text-purple-500 mb-4'
+					>
 						1. Services
 					</h2>
 					<p>
@@ -29,10 +50,16 @@ export default function TermsOfService() {
 
 				{/* Client Responsibilities */}
 				<div>
-					<h2 className='text-2xl font-bold text-green-500 mb-4'>
+					<h2
+						id='client-responsibilities'
+						className='text-2xl font-bold text-green-500 mb-4'
+					>
 						2. Client Responsibilities
 					</h2>
-					<ul className='list-disc list-inside space-y-2'>
+					<ul
+						className='list-disc list-inside space-y-2'
+						aria-labelledby='client-responsibilities'
+					>
 						<li>
 							Provide accurate and complete information necessary for project
 							completion.
@@ -50,8 +77,16 @@ export default function TermsOfService() {
 
 				{/* Payments */}
 				<div>
-					<h2 className='text-2xl font-bold text-blue-500 mb-4'>3. Payments</h2>
-					<ul className='list-disc list-inside space-y-2'>
+					<h2
+						id='terms-payments'
+						className='text-2xl font-bold text-blue-500 mb-4'
+					>
+						3. Payments
+					</h2>
+					<ul
+						className='list-disc list-inside space-y-2'
+						aria-labelledby='terms-payments'
+					>
 						<li>
 							Payment terms will be outlined in the project agreement and may
 							include milestones or upfront deposits.
@@ -69,7 +104,10 @@ export default function TermsOfService() {
 
 				{/* Revisions and Changes */}
 				<div>
-					<h2 className='text-2xl font-bold text-pink-500 mb-4'>
+					<h2
+						id='revisions-changes'
+						className='text-2xl font-bold text-pink-500 mb-4'
+					>
 						4. Revisions and Changes
 					</h2>
 					<p>
@@ -81,7 +119,10 @@ export default function TermsOfService() {
 
 				{/* Confidentiality */}
 				<div>
-					<h2 className='text-2xl font-bold text-amber-500 mb-4'>
+					<h2
+						id='confidentiality'
+						className='text-2xl font-bold text-amber-500 mb-4'
+					>
 						5. Confidentiality
 					</h2>
 					<p>
@@ -94,10 +135,16 @@ export default function TermsOfService() {
 
 				{/* Intellectual Property */}
 				<div>
-					<h2 className='text-2xl font-bold text-purple-500 mb-4'>
+					<h2
+						id='intellectual-property'
+						className='text-2xl font-bold text-purple-500 mb-4'
+					>
 						6. Intellectual Property
 					</h2>
-					<ul className='list-disc list-inside space-y-2'>
+					<ul
+						className='list-disc list-inside space-y-2'
+						aria-labelledby='intellectual-property'
+					>
 						<li>
 							Upon full payment, ownership of the deliverables will transfer to
 							the client unless otherwise specified.
@@ -111,7 +158,10 @@ export default function TermsOfService() {
 
 				{/* Limitation of Liability */}
 				<div>
-					<h2 className='text-2xl font-bold text-red-500 mb-4'>
+					<h2
+						id='limitation-liability'
+						className='text-2xl font-bold text-red-500 mb-4'
+					>
 						7. Limitation of Liability
 					</h2>
 					<p>
@@ -122,7 +172,10 @@ export default function TermsOfService() {
 
 				{/* Termination */}
 				<div>
-					<h2 className='text-2xl font-bold text-green-500 mb-4'>
+					<h2
+						id='termination'
+						className='text-2xl font-bold text-green-500 mb-4'
+					>
 						8. Termination
 					</h2>
 					<p>
@@ -134,14 +187,20 @@ export default function TermsOfService() {
 
 				{/* Contact Information */}
 				<div>
-					<h2 className='text-2xl font-bold text-amber-500 mb-4'>
+					<h2
+						id='contact-information'
+						className='text-2xl font-bold text-amber-500 mb-4'
+					>
 						9. Contact Information
 					</h2>
 					<p>
 						For any questions or concerns regarding these terms, please contact
 						me at:
 					</p>
-					<address className='mt-4 not-italic'>
+					<address
+						className='mt-4 not-italic'
+						aria-labelledby='contact-information'
+					>
 						<strong>Email:</strong>{" "}
 						<a
 							href='mailto:KlowdenSolutions@gmail.com'
@@ -154,7 +213,10 @@ export default function TermsOfService() {
 			</section>
 
 			{/* Decorative Divider */}
-			<div className='w-full h-1 mt-12 bg-gradient-to-r from-purple-600 via-amber-500 to-green-600 rounded-full'></div>
+			<div
+				className='w-full h-1 mt-12 bg-gradient-to-r from-purple-600 via-amber-500 to-green-600 rounded-full'
+				aria-hidden='true'
+			></div>
 		</div>
 	)
 }
