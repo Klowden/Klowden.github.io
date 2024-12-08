@@ -67,8 +67,11 @@ export default function Resume() {
 					className='text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto bg-gray-950 py-3 px-5 rounded-lg shadow-md'
 					aria-describedby='resume-description'
 				>
-					A showcase of my creative resume design using HTML, JavaScript, and
-					CSS—blending functionality and style.
+					DISCLAIMER: Thus is a showcase of an OLD and Deprecated resume
+					utilizing HTML, JavaScript, and CSS—blending functionality and style
+					while incorporating some more... creative choices. For my current
+					Resume, please contact me directly until I get it added to this site.
+					Work in progress.
 				</p>
 			</header>
 
