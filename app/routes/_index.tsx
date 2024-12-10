@@ -34,7 +34,7 @@ export default function Index() {
 						Christopher Lowden
 					</h1>
 					<h2 className='text-gray-300 text-2xl md:text-3xl font-medium mt-4 mb-8'>
-						Fullstack Web Application Developer
+						= [ 'Web_Developer', 'Game_Developer', 'Software Engineer' ]
 					</h2>
 
 					{/* Profile Image and Quotes */}
